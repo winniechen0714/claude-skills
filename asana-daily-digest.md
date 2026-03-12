@@ -7,7 +7,7 @@
 ## 專案資訊
 
 ```
-GitHub Repo:   easonfong-blip/asana-daily-digest
+GitHub Repo:   winniechen0714/asana-daily-digest
 Workflow 檔案: .github/workflows/daily-digest.yml
 腳本路徑:      digest.py
 排程時間:      每日 UTC 22:00（台灣時間 06:00）
@@ -22,7 +22,7 @@ Workflow 檔案: .github/workflows/daily-digest.yml
 ### 情境 A：查看最近執行狀態
 
 ```bash
-gh run list --repo easonfong-blip/asana-daily-digest --workflow=daily-digest.yml --limit 5
+gh run list --repo winniechen0714/asana-daily-digest --workflow=daily-digest.yml --limit 5
 ```
 
 輸出格式化摘要，包含：
@@ -33,7 +33,7 @@ gh run list --repo easonfong-blip/asana-daily-digest --workflow=daily-digest.yml
 ### 情境 B：手動補發（今日）
 
 ```bash
-gh workflow run daily-digest.yml --repo easonfong-blip/asana-daily-digest
+gh workflow run daily-digest.yml --repo winniechen0714/asana-daily-digest
 ```
 
 觸發後等待約 30 秒，再查詢執行結果確認成功。
@@ -41,7 +41,7 @@ gh workflow run daily-digest.yml --repo easonfong-blip/asana-daily-digest
 ### 情境 C：查看最近一次執行 Log
 
 ```bash
-gh run view --repo easonfong-blip/asana-daily-digest --log $(gh run list --repo easonfong-blip/asana-daily-digest --limit 1 --json databaseId --jq '.[0].databaseId')
+gh run view --repo winniechen0714/asana-daily-digest --log $(gh run list --repo winniechen0714/asana-daily-digest --limit 1 --json databaseId --jq '.[0].databaseId')
 ```
 
 ### 情境 D：診斷失敗原因
